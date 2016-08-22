@@ -12,7 +12,7 @@ defmodule MyAcs.Mixfile do
 
   def application do
     [applications: [:logger, :acs_ex],
-     mod: {MyACS, []}]
+     mod: {MyAcs, []}]
   end
 
   defp deps do
