@@ -1,4 +1,6 @@
 # my_acs
+[![Build Status](https://travis-ci.org/Fullrate/my_acs.svg?branch=master)](https://travis-ci.org/Fullrate/my_acs)
+
 Example of how to use acs_ex
 
 ## Description ##
