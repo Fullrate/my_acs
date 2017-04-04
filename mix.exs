@@ -3,7 +3,7 @@ defmodule MyAcs.Mixfile do
 
   def project do
     [app: :my_acs,
-     version: "0.1.0",
+     version: "0.1.1",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -17,7 +17,7 @@ defmodule MyAcs.Mixfile do
 
   defp deps do
     [
-      {:acs_ex, git: "git@github.com:Fullrate/acs_ex.git"}
+      {:acs_ex, "~> 0.3.3"}
     ]
   end
 end
