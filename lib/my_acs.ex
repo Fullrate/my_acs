@@ -15,7 +15,7 @@ defmodule MyAcs do
     acs_port = Application.get_env(:fullrate_acs, :acs_port, 7547)
 
     children = [
-      worker(ACS, [MyAcs.Session, acs_port], [] )
+      worker(ACS, [MyAcs.Session, acs_port, {127,0,0,1}, {0,0,0,0,0,0}], [] ),
     ]
 
     opts = [strategy: :one_for_one, name: MyAcs.Supervisor]

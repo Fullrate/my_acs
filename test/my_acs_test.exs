@@ -37,7 +37,7 @@ defmodule MyAcsTest do
     spv_response=to_string(:io_lib.format(@spv_sample_response,[parsed.header.id]))
     {:ok,resp,_} = sendStr(spv_response,cookie)
     assert resp.body == ""
-    assert resp.status_code == 200
+    assert resp.status_code == 204
   end
 
 

@@ -5,6 +5,19 @@ defmodule MyAcs.Session do
 
   @doc """
 
+  A filter that can act as a gateway for a session, here you
+  could for instance have a whitelist of product_classes or 
+  something similar.
+
+  Returns :ok or {:reject, reason}
+
+  """
+  def session_filter(device_id, inform) do
+    :ok # Allow all
+  end
+
+  @doc """
+
   This is where the session starter (Inform) comes
   into play. From here you have access to the specced
   methods, defined in ACS.Session.Script.Vendor.Helpers
