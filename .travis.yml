@@ -1,4 +1,4 @@
 language: elixir
-elixir: 1.4.0
+elixir: 1.8.1
 sudo: required
 

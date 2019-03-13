@@ -40,5 +40,9 @@ defmodule MyAcsTest do
     assert resp.status_code == 204
   end
 
+  test "cytco1" do
+    {:ok,resp,cookie} = sendFile(fixture_path("informs/plain2"))
+    assert resp.body == readFixture!(fixture_path("informs/plain2_response"))
+  end
 
 end

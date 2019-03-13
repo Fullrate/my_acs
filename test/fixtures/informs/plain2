@@ -1,0 +1,63 @@
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+    <SOAP-ENV:Header>
+      <cwmp:ID SOAP-ENV:mustUnderstand="1">31645</cwmp:ID>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+      <cwmp:Inform>
+        <DeviceId>
+          <Manufacturer>Cytco</Manufacturer>
+          <OUI>00a859</OUI>
+          <ProductClass>BCM Serials</ProductClass>
+          <SerialNumber>00100400FV020010000000a859f6a238</SerialNumber>
+        </DeviceId>
+        <Event SOAP-ENC:arrayType="cwmp:EventStruct[1]">
+          <EventStruct>
+            <EventCode>2 PERIODIC</EventCode>
+            <CommandKey></CommandKey>
+          </EventStruct>
+        </Event>
+        <MaxEnvelopes>1</MaxEnvelopes>
+        <CurrentTime>2019-03-05T11:54:14</CurrentTime>
+        <RetryCount>942</RetryCount>
+        <ParameterList SOAP-ENC:arrayType="cwmp:ParameterValueStruct[8]">
+            <ParameterValueStruct>
+              <Name>InternetGatewayDevice.DeviceInfo.SpecVersion</Name>
+              <Value xsi:type="xsd:string">1.0</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+              <Name>InternetGatewayDevice.DeviceInfo.HardwareVersion</Name>
+              <Value xsi:type="xsd:string">1.0</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+              <Name>InternetGatewayDevice.DeviceInfo.SoftwareVersion</Name>
+              <Value xsi:type="xsd:string">2.3.1-65-g79fe05b build 4388</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+              <Name>InternetGatewayDevice.DeviceInfo.ProvisioningCode</Name>
+              <Value xsi:type="xsd:string"></Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+              <Name>InternetGatewayDevice.ManagementServer.ConnectionRequestURL</Name>
+              <Value xsi:type="xsd:string">http://192.168.40.144:8088/</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+              <Name>InternetGatewayDevice.ManagementServer.ParameterKey</Name>
+              <Value xsi:type="xsd:string"></Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+              <Name>InternetGatewayDevice.DeviceSummary</Name>
+              <Value xsi:type="xsd:string">InternetGatewayDevice:1.0[](Baseline:1, Time:1, Bridging:1, LANDevice:1, WANDevice:1, IPPingDiagnostics:1)</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+              <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.ExternalIPAddress</Name>
+              <Value xsi:type="xsd:string">192.168.40.144</Value>
+            </ParameterValueStruct>
+        </ParameterList>
+      </cwmp:Inform>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

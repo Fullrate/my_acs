@@ -26,7 +26,7 @@ defmodule RequestSenders do
 
   def readFixture!(file) do
     { :ok, data } = File.read(file)
-    String.rstrip(data,?\n)
+    String.trim_trailing(data,"\n")
   end
 
   def fixture_path do
