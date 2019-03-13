@@ -42,7 +42,16 @@ defmodule MyAcsTest do
 
   test "cytco1" do
     {:ok,resp,cookie} = sendFile(fixture_path("informs/plain2"))
+    assert resp.body == "Plug.Parsers.ParseError raised"
+    assert resp.status_code == 400
+
+
+    {:ok,resp,cookie} = sendFile(fixture_path("informs/plain2_handfixed"))
     assert resp.body == readFixture!(fixture_path("informs/plain2_response"))
+    assert resp.status_code == 200
+    {:ok,resp,cookie} = sendStr("",cookie) # This should cause a GetParameterValue request
+    assert resp.status_code == 204
+
   end
 
 end

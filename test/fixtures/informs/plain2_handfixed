@@ -22,7 +22,7 @@
           </EventStruct>
         </Event>
         <MaxEnvelopes>1</MaxEnvelopes>
-        <CurrentTime>2019-03-05T11:54::14</CurrentTime>
+        <CurrentTime>2019-03-05T11:54:14</CurrentTime>
         <RetryCount>942</RetryCount>
         <ParameterList SOAP-ENC:arrayType="cwmp:ParameterValueStruct[8]">
             <ParameterValueStruct>

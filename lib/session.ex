@@ -32,7 +32,12 @@ defmodule MyAcs.Session do
       [] ->
         Logger.error("ProvisioningCode not found")
         :error
-      ["ProvisionMePlease"] -> setParameterValues( session, [%{name: "InternetGatewayDevice.DeviceInfo.ProvisioningCode", type: "xsd:string", value: "provisioned"}] )
+      [""] ->
+        Logger.warn "Provisioning code blank"
+        :error
+      ["ProvisionMePlease"] ->
+        setParameterValues( session, [%{name: "InternetGatewayDevice.DeviceInfo.ProvisioningCode", type: "xsd:string", value: "provisioned"}] )
+        :ok
     end
 
   end
