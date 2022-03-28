@@ -12,14 +12,14 @@ defmodule MyAcs do
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
 
-    acs_port = Application.get_env(:fullrate_acs, :acs_port, 7547)
+    acs_port = Application.get_env(:acs_ex, :acs_port, 7548)
 
     children = [
-      worker(ACS, [MyAcs.Session, acs_port, {127,0,0,1}, {0,0,0,0,0,0}], [] ),
+      {ACS,
+       {MyAcs.Session, acs_port: acs_port, acs_ip: {127, 0, 0, 1}, acs_ipv6: {0, 0, 0, 0, 0, 0}}}
     ]
 
     opts = [strategy: :one_for_one, name: MyAcs.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end
-
